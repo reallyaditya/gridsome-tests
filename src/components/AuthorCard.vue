@@ -9,47 +9,34 @@
       blur="5"
     />
 
-    <h3 class="author__name">
-      {{ $page.author.name }}
-    </h3>
+    <div class="author__for" v-for="edge in author.authors" :key="edge.id">
+      <h3 class="author__name">
+        {{ edge.name }}
+      </h3>
 
-    <p class="author__intro">
-      {{ $page.author.bio }}
-    </p>
+      <p class="author__intro">
+        {{ edge.bio }}
+      </p>
 
-    <p class="author__links">
-      <g-link
-        :key="$page.author.id"
-        :to="'//twitter.com/' + $page.author.twitter"
-        >Follow on Twitter</g-link
-      >
-      <g-link
-        :key="$page.author.id"
-        :to="'//facebook.com/' + $page.author.facebook"
-        >Facebook</g-link
-      >
-      <!-- <a href="//twitter.com/gridsome">Follow on Twitter</a> -->
-      <!-- <a href="//github.com/gridsome/gridsome-starter-blog">Facebook</a> -->
-    </p>
+      <p class="author__links">
+        <g-link :key="edge.id" :to="'//twitter.com/' + edge.twitter"
+          >Follow on Twitter</g-link
+        >
+        <g-link :key="edge.id" :to="'//facebook.com/' + edge.facebook"
+          >Facebook</g-link
+        >
+        <!-- <a href="//twitter.com/gridsome">Follow on Twitter</a> -->
+        <!-- <a href="//github.com/gridsome/gridsome-starter-blog">Facebook</a> -->
+      </p>
+    </div>
   </div>
 </template>
 
-<page-query>
-query Author ($path: String!) {
-	author: ghostAuthor (path: $path) {
-    	id
-    	name
-        slug
-    	bio
-		twitter
-		facebook
-  }
-}
-</page-query>
-
 <script>
 export default {
-  props: ["showTitle"],
+  props: {
+    author: Object,
+  },
 };
 </script>
 

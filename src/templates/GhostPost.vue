@@ -26,34 +26,10 @@
       <!-- Add comment widgets here -->
     </div>
 
-    <Author class="post-author" :post="$page.post" />
+    <!-- <Author class="post-author" :post="$page.post" /> -->
+    <AuthorCard class="post-author" :author="$page.post" />
   </Layout>
 </template>
-
-<script>
-import PostMeta from "~/components/PostMeta";
-import PostTags from "~/components/PostTags";
-import Author from "~/components/Author.vue";
-
-export default {
-  components: {
-    Author,
-    PostMeta,
-    PostTags,
-  },
-  metaInfo() {
-    return {
-      title: this.$page.post.title,
-      meta: [
-        {
-          name: "description",
-          content: this.$page.post.description,
-        },
-      ],
-    };
-  },
-};
-</script>
 
 <page-query>
 query Post ($path: String!) {
@@ -81,6 +57,36 @@ query Post ($path: String!) {
   }
 }
 </page-query>
+
+<script>
+import PostMeta from "~/components/PostMeta";
+import PostTags from "~/components/PostTags";
+import Author from "~/components/Author.vue";
+import AuthorCard from "~/components/AuthorCard.vue";
+
+export default {
+  components: {
+    AuthorCard,
+    Author,
+    PostMeta,
+    PostTags,
+  },
+  props: {
+    author: Object,
+  },
+  metaInfo() {
+    return {
+      title: this.$page.post.title,
+      meta: [
+        {
+          name: "description",
+          content: this.$page.post.description,
+        },
+      ],
+    };
+  },
+};
+</script>
 
 <style lang="scss">
 .post-title {
