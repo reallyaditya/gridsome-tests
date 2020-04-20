@@ -7,15 +7,15 @@
     <div class="post-authors">
       <g-link
         class="post-author__link"
-        v-for="edge in $page.authors.edges"
-        :key="edge.node.id"
-        :to="'/author/' + edge.node.slug"
+        v-for="author in $page.authors.edges"
+        :key="author.node.id"
+        :to="'/author/' + author.node.slug"
       >
         <!-- <div class="image-container rounded-full overflow-hidden w-32 h-32">
           <img :src="author.profile_image" />
         </div> -->
         <!-- <div class="font-bold pt-3">{{ author.name }}</div> -->
-        <p>{{ edge.node.name }}</p>
+        <p>{{ author.node.name }}</p>
       </g-link>
     </div>
   </div>
@@ -45,51 +45,5 @@
 </style>
 
 <script>
-// import { mapGetters, mapActions } from "vuex";
-
-export default {
-  props: ["post"],
-  //   name: "authors",
-  //   components: {},
-  //   computed: {
-  //     ...mapGetters({ ghost: "getGhost" }),
-  //   },
-  //   data() {
-  //     return {
-  //       authors: [],
-  //     };
-  //   },
-  //   async fetch() {
-  //     const authors = await this.ghost.authors.browse();
-  //     this.authors = authors;
-  //   },
-  //   head() {
-  //     return {
-  //       title: "Authors",
-  //       meta: [
-  //         {
-  //           hid: "description",
-  //           name: "description",
-  //           content: "authors",
-  //         },
-  //         { hid: "og:type", property: "og:type", content: "page" },
-  //         {
-  //           hid: "og:title",
-  //           property: "og:title",
-  //           content: "authors",
-  //         },
-  //         {
-  //           hid: "og:description",
-  //           property: "og:description",
-  //           content: "authors",
-  //         },
-  //         {
-  //           hid: "og:url",
-  //           property: "og:url",
-  //           content: process.env.siteUrl + this.$route.path,
-  //         },
-  //       ],
-  //     };
-  //   },
-};
+export default {};
 </script>
