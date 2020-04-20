@@ -12,6 +12,7 @@ module.exports = {
   templates: {
     GhostPost: "/:title",
     GhostTag: "/tag/:id",
+    GhostAuthor: "/author/:slug",
   },
 
   plugins: [

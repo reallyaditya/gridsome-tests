@@ -24,7 +24,7 @@
 query Author ($path: String!) {
   author:ghostAuthor (path: $path) {
     name
-    path
+    slug
     profile_image
     belongsTo {
       edges {
