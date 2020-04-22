@@ -26,7 +26,6 @@
       <!-- Add comment widgets here -->
     </div>
 
-    <!-- <Author class="post-author" :post="$page.post" /> -->
     <AuthorCard class="post-author" :post="$page.post" />
   </Layout>
 </template>
@@ -63,7 +62,6 @@ import PostMeta from "~/components/PostMeta";
 import PostTags from "~/components/PostTags";
 import Author from "~/components/Author.vue";
 import AuthorCard from "~/components/AuthorCard.vue";
-// import PostExcerpt from "~/components/PostExcerpt.vue";
 
 export default {
   components: {
@@ -71,7 +69,6 @@ export default {
     Author,
     PostMeta,
     PostTags,
-    // PostExcerpt,
   },
   props: {
     post: Object,
