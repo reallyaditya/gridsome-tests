@@ -2,8 +2,8 @@
   <Layout>
     <div class="post-title">
       <h1 class="post-title__text">{{ $page.post.title }}</h1>
-
-      <PostMeta :post="$page.post" />
+      <PostExcerpt :post="$page.post" />
+      <PostMeta :post="$page.post" :show-summary="true" />
     </div>
 
     <div class="post content-box">
@@ -27,7 +27,7 @@
     </div>
 
     <!-- <Author class="post-author" :post="$page.post" /> -->
-    <AuthorCard class="post-author" :author="$page.post" />
+    <AuthorCard class="post-author" :post="$page.post" />
   </Layout>
 </template>
 
@@ -63,6 +63,7 @@ import PostMeta from "~/components/PostMeta";
 import PostTags from "~/components/PostTags";
 import Author from "~/components/Author.vue";
 import AuthorCard from "~/components/AuthorCard.vue";
+// import PostExcerpt from "~/components/PostExcerpt.vue";
 
 export default {
   components: {
@@ -70,9 +71,10 @@ export default {
     Author,
     PostMeta,
     PostTags,
+    // PostExcerpt,
   },
   props: {
-    author: Object,
+    post: Object,
   },
   metaInfo() {
     return {

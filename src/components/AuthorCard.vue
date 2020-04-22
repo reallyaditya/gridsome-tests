@@ -9,7 +9,7 @@
       blur="5"
     />
 
-    <div class="author__for" v-for="edge in author.authors" :key="edge.id">
+    <div class="author__for" v-for="edge in post.authors" :key="edge.id">
       <h3 class="author__name">
         {{ edge.name }}
       </h3>
@@ -35,7 +35,7 @@
 <script>
 export default {
   props: {
-    author: Object,
+    post: Object,
   },
 };
 </script>

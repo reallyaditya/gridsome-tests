@@ -1,7 +1,7 @@
 // Import main css
 import "~/assets/style/index.scss";
-// import "~/assets/style/screen.css";
 import "~/assets/style/style.css";
+require("~/main.css");
 
 // Import default layout so we don't need to import it to every page
 import DefaultLayout from "~/layouts/Default.vue";

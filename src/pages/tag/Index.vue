@@ -1,19 +1,21 @@
 <template>
-  <div class="post-tags">
-    <h1 class="post-tags__title">
-      All tags
-    </h1>
+  <Layout :show-logo="false">
+    <div class="post-tags container mx-auto">
+      <h1 class="text-2xl font-bold py-2 text-center md:text-left mb-3">
+        All tags
+      </h1>
 
-    <div class="post-tags__link">
-      <PostTags
-        class="post-card__tags"
-        v-for="edge in $page.tags.edges"
-        :key="edge.node.id"
-        :post="edge"
-        :tag-page="true"
-      />
+      <div class="post-tags__link">
+        <PostTags
+          class="post-card__tags"
+          v-for="edge in $page.tags.edges"
+          :key="edge.node.id"
+          :post="edge"
+          :tag-page="true"
+        />
+      </div>
     </div>
-  </div>
+  </Layout>
 </template>
 
 <page-query>
@@ -42,9 +44,12 @@ export default {
 </script>
 
 <style lang="scss">
-.post-tags {
+.post-tags__link {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 30px;
+}
+.post-card__tags {
+  @apply shadow p-8 text-center;
 }
 </style>

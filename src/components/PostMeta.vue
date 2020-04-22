@@ -4,12 +4,16 @@
     <template v-if="post.timeToRead">
       <strong>{{ post.timeToRead }} min read.</strong>
     </template>
+    <!-- <header class="post-full-header" v-if="post"> -->
+    <p class="post-full-custom-excerpt" v-if="showSummary">
+      {{ post.description }}
+    </p>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["post"],
+  props: ["post", "showSummary"],
 };
 </script>
 

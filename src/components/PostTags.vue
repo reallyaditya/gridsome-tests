@@ -6,7 +6,7 @@
       :key="tag.id"
       :to="tag.path"
     >
-      <span>#</span> {{ tag.title }}
+      # {{ tag.title }}
     </g-link>
   </div>
 
@@ -17,7 +17,7 @@
       :key="tag.id"
       :to="tag.path"
     >
-      <span>#</span> {{ tag.title }}
+      # {{ tag.title }}
     </g-link>
   </div>
 </template>
