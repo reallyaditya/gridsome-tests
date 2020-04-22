@@ -4,6 +4,7 @@
     :class="{ 'post-card--has-poster': post.poster }"
   >
     <div class="post-card__header">
+      <!-- <AuthorCircle class="author-circle-image" :post="post" /> -->
       <g-image
         alt="Cover image"
         v-if="post.cover_image"
@@ -17,7 +18,6 @@
 
       <PostMeta class="post-card__meta" :post="post" />
       <PostTags class="post-card__tags" :post="post" />
-      <!-- <AuthorCircle class="author-circle-image" :post="post" /> -->
 
       <g-link class="post-card__link" :to="post.path">Link</g-link>
     </div>
