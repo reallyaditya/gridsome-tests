@@ -4,6 +4,16 @@
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+// Tailwind Import
+
+const tailwind = require("tailwindcss");
+const purgecss = require("@fullhuman/postcss-purgecss");
+
+const postcssPlugins = [tailwind()];
+
+if (process.env.NODE_ENV === "production")
+  postcssPlugins.push(purgecss(require("./purgecss.config.js")));
+
 module.exports = {
   siteName: "Gridsome Blog Starter",
   siteDescription:
@@ -11,10 +21,16 @@ module.exports = {
 
   templates: {
     GhostPost: "/:title",
-    GhostTag: "/tag/:id",
+    GhostTag: "/tag/:slug",
     GhostAuthor: "/author/:slug",
   },
-
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: postcssPlugins,
+      },
+    },
+  },
   plugins: [
     {
       // Create posts from markdown files
