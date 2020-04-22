@@ -17,6 +17,7 @@
 
       <PostMeta class="post-card__meta" :post="post" />
       <PostTags class="post-card__tags" :post="post" />
+      <!-- <AuthorCircle class="author-circle-image" :post="post" /> -->
 
       <g-link class="post-card__link" :to="post.path">Link</g-link>
     </div>
@@ -26,11 +27,13 @@
 <script>
 import PostMeta from "~/components/PostMeta";
 import PostTags from "~/components/PostTags";
+import AuthorCircle from "~/components/AuthorCircle.vue";
 
 export default {
   components: {
     PostMeta,
     PostTags,
+    AuthorCircle,
   },
   props: ["post"],
 };
