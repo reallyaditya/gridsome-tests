@@ -1,7 +1,7 @@
 <template>
   <Layout :show-logo="false">
     <div class="container mx-auto">
-      <h1 class="text-2xl font-bold py-2 text-center md:text-left mb-3">
+      <h1 class="text-4xl font-bold py-2 text-center md:text-left mb-3">
         All authors
       </h1>
 
@@ -46,6 +46,11 @@
 }
 .post-author__link {
   @apply shadow p-8 text-center;
+}
+.post-author__link:hover {
+  transition: transform 0.3s;
+  transform: translateY(-5px);
+  box-shadow: 1px 10px 30px 0 rgba(0, 0, 0, 0.1);
 }
 </style>
 

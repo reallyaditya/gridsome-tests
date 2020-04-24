@@ -8,7 +8,11 @@
     </a> -->
 
   <div class="author-card">
-    <div class="author-circle" v-for="author in post.authors" :key="author.id">
+    <div
+      class="author-card__circle"
+      v-for="author in post.authors"
+      :key="author.id"
+    >
       <g-link
         class="author-link"
         alt="Author Profile URL"
@@ -16,7 +20,7 @@
         :to="author.path"
       >
         <g-image
-          class="author-image"
+          class="author-card__circle__image"
           alt="Author Profile Image"
           :key="author.id"
           :src="author.profile_image"
@@ -32,3 +36,28 @@ export default {
   props: ["post"],
 };
 </script>
+
+<style lang="scss" scoped>
+.author-card {
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+
+  &__circle {
+    width: 50px;
+    height: 50px;
+
+    &__image {
+      border-radius: 50%;
+      border-width: 3px;
+      border-color: whitesmoke;
+    }
+
+    &__image:hover {
+      transition: transform 0.5s;
+      transform: translateY(-5px);
+      box-shadow: 1px 10px 30px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+</style>

@@ -30,10 +30,11 @@ export default {
 
 <style lang="scss">
 .post-tags {
-  margin: 1em 0 0;
+  // margin: 1em 0 0;
+  padding: 1em 0 0;
 
   &__link {
-    margin-right: 0.7em;
+    // margin-right: 0.7em;
     font-size: 0.8em;
     color: currentColor;
     text-decoration: none;

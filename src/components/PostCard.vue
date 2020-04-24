@@ -4,7 +4,10 @@
     :class="{ 'post-card--has-poster': post.poster }"
   >
     <div class="post-card__header">
-      <!-- <AuthorCircle class="author-circle-image" :post="post" /> -->
+      <AuthorCircle
+        class="post-card__header__author-circle-image"
+        :post="post"
+      />
       <g-image
         alt="Cover image"
         v-if="post.cover_image"
@@ -54,6 +57,13 @@ export default {
 
     &:empty {
       display: none;
+    }
+
+    &__author-circle-image {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      z-index: 2;
     }
   }
 
