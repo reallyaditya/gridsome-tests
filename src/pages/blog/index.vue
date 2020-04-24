@@ -10,7 +10,6 @@
         :key="edge.node.id"
         :post="edge.node"
       />
-      <!-- <AuthorCircle :post="edge.node" /> -->
     </div>
   </Layout>
 </template>
@@ -50,12 +49,10 @@
 <script>
 import Author from "~/components/Author.vue";
 import PostCard from "~/components/PostCard.vue";
-// import AuthorCircle from "~/components/AuthorCircle.vue";
 
 export default {
   components: {
     Author,
-    // AuthorCircle,
     PostCard,
   },
   metaInfo: {

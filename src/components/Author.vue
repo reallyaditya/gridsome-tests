@@ -67,6 +67,8 @@ export default {
     width: 90px;
     height: 90px;
     margin-bottom: 1em;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   &__intro {
