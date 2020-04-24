@@ -50,8 +50,8 @@ module.exports = {
     {
       use: "@gridsome/source-ghost",
       options: {
-        baseUrl: "http://localhost:2369",
-        contentKey: "b9ad45fa933caf4005e7e527a3",
+        baseUrl: "https://demo.ghost.io",
+        contentKey: "22444f78447824223cefc48062",
         routes: {
           post: "/:slug",
           page: "/:slug",
