@@ -60,13 +60,11 @@ query Post ($path: String!) {
 <script>
 import PostMeta from "~/components/PostMeta";
 import PostTags from "~/components/PostTags";
-import Author from "~/components/Author.vue";
 import AuthorCard from "~/components/AuthorCard.vue";
 
 export default {
   components: {
     AuthorCard,
-    Author,
     PostMeta,
     PostTags,
   },

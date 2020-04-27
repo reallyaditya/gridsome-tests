@@ -1,7 +1,7 @@
 <template>
   <Layout :show-logo="false">
     <!-- Author intro -->
-    <Author :show-title="true" />
+    <MetaSite />
 
     <!-- List posts -->
     <div class="posts">
@@ -47,12 +47,12 @@
 </page-query>
 
 <script>
-import Author from "~/components/Author.vue";
+import MetaSite from "~/components/MetaSite.vue";
 import PostCard from "~/components/PostCard.vue";
 
 export default {
   components: {
-    Author,
+    MetaSite,
     PostCard,
   },
   metaInfo: {

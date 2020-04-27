@@ -1,7 +1,6 @@
 <template>
-  <Layout :show-logo="false">
-    <!-- <TopBar /> -->
-    <Author :show-title="true" />
+  <Layout>
+    <MetaSite />
     <h2 class="title">
       A free and open source theme for headless Ghost CMS
     </h2>
@@ -13,20 +12,20 @@
         View Posts
       </g-link>
     </div>
+    <div class="md:w-1/2">
+      <Logo class="w-32 sm:w-48 lg:w-64 mx-auto" />
+    </div>
   </Layout>
 </template>
 
 <script>
-import Author from "~/components/Author.vue";
-import TopBar from "~/components/TopBar.vue";
+import MetaSite from "~/components/MetaSite.vue";
+import Logo from "~/components/Logo.vue";
 
 export default {
   components: {
-    Author,
-    TopBar,
-  },
-  metaInfo: {
-    title: "Hello, world!",
+    MetaSite,
+    Logo,
   },
 };
 </script>
