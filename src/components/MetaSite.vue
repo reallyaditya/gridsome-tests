@@ -4,6 +4,12 @@
       {{ $static.metadata.ghost.title }}
     </h1>
 
+    <g-image
+      alt="Cover Image"
+      class="cover_image"
+      :src="$static.metadata.ghost.cover_image"
+    />
+
     <p class="meta__intro">
       {{ $static.metadata.ghost.description }}
     </p>
@@ -12,9 +18,15 @@
       <g-link :to="'//twitter.com/' + $static.metadata.ghost.twitter"
         >Follow on Twitter</g-link
       >
+      <!-- <g-link :to="'//twitter.com/' + $static.metadata.ghost.twitter"
+        ><g-image src="@/assets/images/twitter.svg"
+      /></g-link> -->
       <g-link :to="'//facebook.com/' + $static.metadata.ghost.facebook"
         >Facebook</g-link
       >
+      <!-- <g-link :to="'//facebook.com/' + $static.metadata.ghost.facebook"
+        ><g-image src="@/assets/images/facebook.svg"
+      /></g-link> -->
     </p>
   </div>
 </template>

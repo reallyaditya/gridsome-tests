@@ -16,7 +16,6 @@
             <img :src="author.node.profile_image" />
           </div>
           <div class="font-bold pt-3">{{ author.node.name }}</div>
-          <!-- <p>{{ author.node.name }}</p> -->
         </g-link>
       </div>
     </div>

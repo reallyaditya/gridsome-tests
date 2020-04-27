@@ -1,8 +1,8 @@
 <template>
-  <div id="app flex md:min-h-screen flex-col">
+  <div id="app">
     <TopBar />
 
-    <main class="main">
+    <main class="main flex md:min-h-screen flex-col flex-grow">
       <slot />
     </main>
 
