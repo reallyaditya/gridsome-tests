@@ -1,15 +1,15 @@
 <template>
   <div class="author">
-    <g-image
-      alt="Author image"
-      class="author__image"
-      src="~/assets/images/author.jpg"
-      width="180"
-      height="180"
-      blur="5"
-    />
-
     <div class="author__for" v-for="edge in post.authors" :key="edge.id">
+      <g-image
+        alt="Author image"
+        class="author__image"
+        :src="edge.profile_image"
+        width="180"
+        height="180"
+        blur="5"
+      />
+
       <h3 class="author__name">
         {{ edge.name }}
       </h3>
@@ -25,8 +25,6 @@
         <g-link :key="edge.id" :to="'//facebook.com/' + edge.facebook"
           >Facebook</g-link
         >
-        <!-- <a href="//twitter.com/gridsome">Follow on Twitter</a> -->
-        <!-- <a href="//github.com/gridsome/gridsome-starter-blog">Facebook</a> -->
       </p>
     </div>
   </div>
@@ -52,6 +50,8 @@ export default {
     width: 90px;
     height: 90px;
     margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__intro {

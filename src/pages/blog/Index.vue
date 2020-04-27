@@ -1,5 +1,5 @@
 <template>
-  <Layout :show-logo="false">
+  <Layout>
     <!-- Author intro -->
     <MetaSite />
 
@@ -54,9 +54,6 @@ export default {
   components: {
     MetaSite,
     PostCard,
-  },
-  metaInfo: {
-    title: "Hello, world!",
   },
 };
 </script>
