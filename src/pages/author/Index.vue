@@ -29,6 +29,7 @@
       node {
         id
         name
+        bio
         slug
         profile_image
       }

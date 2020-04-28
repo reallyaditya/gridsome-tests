@@ -26,7 +26,7 @@ query Tag ($path: String!) {
             path
             date: published_at (format: "D. MMMM YYYY")
             description: excerpt
-            coverImage: feature_image
+            cover_image: feature_image
             content: html
             slug
           }
@@ -49,5 +49,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss"></style>

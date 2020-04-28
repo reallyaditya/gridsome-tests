@@ -24,6 +24,7 @@
 
     <div class="post-comments">
       <!-- Add comment widgets here -->
+      <RealtedPosts />
     </div>
 
     <AuthorCard class="post-author" :post="$page.post" />
@@ -61,12 +62,14 @@ query Post ($path: String!) {
 import PostMeta from "~/components/PostMeta";
 import PostTags from "~/components/PostTags";
 import AuthorCard from "~/components/AuthorCard.vue";
+import RealtedPosts from "~/components/RelatedPosts.vue";
 
 export default {
   components: {
     AuthorCard,
     PostMeta,
     PostTags,
+    RealtedPosts,
   },
   props: {
     post: Object,

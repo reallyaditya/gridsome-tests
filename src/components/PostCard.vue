@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="post-card content-box"
-    :class="{ 'post-card--has-poster': post.poster }"
-  >
+  <div class="post-card content-box">
     <div class="post-card__header">
       <AuthorCircle
         class="post-card__header__author-circle-image"
